@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;1,200&display=swap");
+
+:root {
+  --primary-color: #beadfa;
+  --secondary-color: #fff3da;
+  --primary-light-color: #d0bfff;
+  --primary-extra-light-color: #dfccfb;
+  --gray-color: rgb(199, 197, 197);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(330deg, rgba(86, 203, 149, 0) 0%, #39e394 99.43%);
+  filter: blur(0px);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.calc-body {
+  width: 100%;
+  max-width: 400px; /* Adjust as needed */
+  height: 600px; /* Adjust the fixed height */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 18px;
+  border: 1px solid #fff;
+  background: linear-gradient(
+    135deg,
+    #fbfbfb 0%,
+    rgba(251, 251, 251, 0.2) 100%
+  );
+  box-shadow: 7px 7px 20px 0px rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(25px);
+}
+
+.container {
+  height: 100%; /* Set the height to 100% of the .calc-body */
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(80px, 1fr)
+  ); /* Adjust min and max width as needed */
+  gap: 8px;
+}
+
+.container button {
+  all: unset;
+  border-radius: 16px;
+  background: #f3f3f3;
+  box-shadow: 0px 1px 50px 10px rgba(255, 255, 255, 0.25);
+  color: #707070;
+  font-size: 24px; /* Adjust font size as needed */
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.container button[data-val="="] {
+  border-radius: 16px;
+  background: #56cb95;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+.displayOutput {
+  min-height: 80px;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 12px;
+  white-space: pre-wrap;
+  color: #000;
+  text-align: end;
+}
